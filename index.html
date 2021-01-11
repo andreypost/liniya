@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru-UA">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>liniyagyzny</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header_mob absolute">
+            <nav class="section flex align_center">
+                <i class="header_mob_burger flex justify_between flex_column">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </i>
+                <p class="roboto">Меню</p>
+            </nav>
+        </div>
+        <div class="section header_desk">
+            <div class="header_banner_text relative">
+                <div class="borders_left_top absolute"></div>
+                <div class="borders_left_bottom absolute"></div>
+                <p class="text_center">
+                    Если есть цель- мы поможем найти правильный путь. Начни жить сегодня, никогда не поздно быть
+                    счастливым!
+                </p>
+                <div class="borders_right_top absolute"></div>
+                <div class="borders_right_bottom absolute"></div>
+            </div>
+            <nav class="header_nav absolute">
+                <ul>
+                    <li><a href="">О нас</a></li>
+                    <li><a href="">Причины обратиться</a></li>
+                    <li><a href="">Выбор специалиста</a></li>
+                    <li><a href="">Индивидуальный подход</a></li>
+                    <li><a href="">Как работаем</a></li>
+                    <li><a href="">Отзывы</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <main class="section">
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <p class="append-buttons">
+            <a href="#" class="prepend-2-slides">Prepend 2 Slides</a>
+            <a href="#" class="prepend-slide">Prepend Slide</a>
+            <a href="#" class="append-slide">Append Slide</a>
+            <a href="#" class="append-2-slides">Append 2 Slides</a>
+        </p>
+
+        <form action="" id="connectForm">
+
+
+            <input type="text" name="name" placeholder="Имя" autocomplete="off" required>
+            <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email"
+                autocomplete="off" required>
+
+            <input type="text" name="phone" pattern="^[0-9-+\s()]*$" minlength="8" placeholder="Телефон"
+                autocomplete="off" required>
+
+            <button type="submit" form="connectForm" class="text-white">Отправить</button>
+        </form>
+
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+
+
+
+    </main>
+    <footer class="section">
+
+    </footer>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
