@@ -50,7 +50,7 @@ body {
     flex-direction: column;
 }
 
-p {
+h1, p {
     margin: 0;
 }
 
@@ -63,7 +63,7 @@ p {
 }
 
 h1 {
-    /* font-size: 36px; */
+    font-size: 16px;
 }
 
 h2 {
@@ -76,6 +76,10 @@ h3 {
 
 .header_nav a {
     font-size: 15px;
+}
+
+.normal {
+    font-weight: 400;
 }
 
 .relative {
@@ -94,7 +98,11 @@ button {
     border: none;
 }
 
-button:focus {
+a, a:hover {
+    text-decoration: none;
+}
+
+a:focus, button:focus {
     outline: none;
 }
 
@@ -109,10 +117,6 @@ button, .header_mob_burger {
     cursor: pointer;
 }
 
-a, a:hover {
-    text-decoration: none;
-}
-
 :root {
     /* --blue: #5A17FF; */
     --yellow: #F3C623;
@@ -123,9 +127,10 @@ a, a:hover {
 }
 
 /* header section */
+
 .header_mob {
     top: 0;
-    padding: 34px 0;
+    padding: 38px 0 41px;
     z-index: 9999;
 }
 
@@ -142,6 +147,7 @@ a, a:hover {
     z-index: 999;
     transition: left .2s;
 }
+
 .header_nav.active {
     left: 0%;
 }
@@ -153,7 +159,8 @@ a, a:hover {
 }
 
 .header_nav li:not(:nth-of-type(1)) a {
-    border-top: 2px solid #9576AD;;
+    border-top: 2px solid #9576AD;
+    ;
 }
 
 .header_mob_burger {
@@ -174,6 +181,7 @@ a, a:hover {
     transform: translateX(17px) rotate(45deg) translateY(21.3px);
     height: 4px;
 }
+
 .header_mob_burger.active span:nth-of-type(3) {
     transform: translateX(17px) rotate(-45deg) translateY(-21.3px);
     height: 4px;
@@ -185,106 +193,107 @@ a, a:hover {
     color: var(--yellow);
 }
 
-h1 {
-    margin-top: 30px;
-}
-
-h1 {
-    margin-bottom: 20px;
-}
-
-
 .header_banner_text {
-    margin-top: 120px;
+    margin-top: 133px;
     margin-bottom: 23px;
     padding: 25px 5px;
     border-right: 3px solid var(--yellow);
     border-left: 3px solid var(--yellow);
-  }
-  .borders_left_top, .borders_right_top {
+}
+
+.borders_left_top, .borders_right_top, .borders_left_bottom, .borders_right_bottom {
     border-top: 3px solid var(--yellow);
-  }
-  .borders_left_bottom, .borders_right_bottom {
-    border-top: 3px solid var(--yellow);
-  }
-  .borders_left_top, .borders_left_bottom {
+}
+
+.borders_left_top, .borders_left_bottom {
     right: 96.8%;
     left: 0;
-  }
-  .borders_right_top, .borders_right_bottom {
+}
+
+.borders_right_top, .borders_right_bottom {
     left: 96.8%;
     right: 0;
-  }
-  .borders_left_top, .borders_right_top {
+}
+
+.borders_left_top, .borders_right_top {
     top: 0;
-  }
-  .borders_left_bottom, .borders_right_bottom {
+}
+
+.borders_left_bottom, .borders_right_bottom {
     bottom: 0;
-  }
- 
+}
+
+.header_banner_text h1 {
+    line-height: 19px;
+}
 
 @media (min-width: 576px) {
     .section, .header_nav ul {
         max-width: 540px;
     }
-    
 }
 
 @media (min-width: 768px) {
-
     .section, .header_nav ul {
         max-width: 720px;
     }
 }
 
 @media (min-width: 992px) {
-
     .header_mob {
         display: none;
     }
+    .section {
+        max-width: 960px;
+    }
     .header_nav {
         position: unset;
+        margin-bottom: 42px;
         padding-top: unset;
     }
     .header_nav ul {
+        max-width: 100%;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
+        padding: 0 25px;
     }
-    .section {
-        max-width: 960px;
+    .header_nav li:not(:nth-of-type(1)) a {
+        border-top: unset;
+    }
+    .header_nav a {
+        padding-top: 25px;
+        padding-bottom: 18px;
+        text-indent: unset;
+        margin-bottom: 23px;
+        border-bottom: 2px solid transparent;
+    }
+    .header_nav a:hover {
+        border-bottom-color: var(--yellow);
     }
     .header_banner_text {
         margin-top: 15px;
-        margin-bottom: 60px;
-        padding-top: 13px;
-        padding-bottom: 13px;
+        margin-bottom: 58px;
+        padding: 17px 34px 10px;
     }
     .borders_left_top, .borders_left_bottom {
-        right: 96.5%;
+        right: 96.7%;
     }
-    .borders_right_top, .borders_right_bottom  {
-        left: 96.5%;
+    .borders_right_top, .borders_right_bottom {
+        left: 96.7%;
     }
-    .header_banner_text p {
+    .header_banner_text h1 {
         font-size: 23px;
         line-height: 27px;
+        letter-spacing: -1px;
     }
 }
 
 @media (min-width: 1200px) {
-
     .section {
-        max-width: 1140px;
+        max-width: 1110px;
     }
 }
-
-
-
-
-
-
-
