@@ -7,9 +7,9 @@ document.querySelector('.header_mob_burger').onclick = function (e) {
 }
 
 var appendNumber = 4;
-var prependNumber = 1;
+var prependNumber = 3;
 var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 3,
+  slidesPerView: 2,
   centeredSlides: true,
   spaceBetween: 30,
   pagination: {
@@ -21,6 +21,7 @@ var swiper = new Swiper('.swiper-container', {
     prevEl: '.swiper-button-prev',
   },
 });
+
 document.querySelector('.prepend-2-slides').addEventListener('click', function (e) {
   e.preventDefault();
   swiper.prependSlide([
