@@ -50,7 +50,7 @@ body {
     flex-direction: column;
 }
 
-h1, p {
+h1, h3, p {
     margin: 0;
 }
 
@@ -116,6 +116,13 @@ ul {
     -webkit-padding-start: unset;
     padding-inline-start: unset;
 }
+
+/* {
+    display: -webkit-box;
+    -web-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+} */
 
 button, .header_mob_burger {
     cursor: pointer;
@@ -231,28 +238,50 @@ button, .header_mob_burger {
     line-height: 19px;
 }
 
-
+/* symptoms section */
 .symptoms {
     margin-bottom: 46px;
 }
-
 .symptoms h2 {
     max-width: 360px;
     margin: 0 auto 23px;
     line-height: 21px;
 }
-
 .symptoms_slider .swiper-slide>div {
-    /* z-index: -99; */
+    max-height: 410px;
+    min-height: 410px;
 }
-
+.symptoms_slider .swiper-slide>div {
+    box-sizing: border-box;
+    padding: 23px 10px 10px;
+}
 .symptoms_slider .swiper-slide>div picture img {
-    object-fit: cover;
+    /* object-fit: cover; */
     width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     background-color: #000000;
     z-index: -9;
 }
-
+.symptoms .swiper-slide h3 {
+    margin-bottom: 30px;
+}
+.symptoms_slider .swiper-slide>div>div {
+    max-height: 315px;
+    min-height: 315px;
+    overflow: hidden;
+}
+.symptoms .swiper-slide p {
+    font-size: 11px;
+    line-height: 13px;
+    margin-bottom: 13px;
+}
+.symptoms .swiper-slide p span {
+    font-weight: bold;
+}
 
 
 
@@ -331,15 +360,37 @@ button, .header_mob_burger {
     }
 
 
-
-
-
     .symptoms h2 {
         max-width: 600px;
         margin-bottom: 137px;
         font-size: 28px;
         line-height: 34px;
     }
+    .symptoms_slider .swiper-slide>div {
+        max-height: 295px;
+        min-height: 295px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 43px 25px 43px 85px;
+    }
+    .symptoms .swiper-slide h3 {
+        margin-right: 60px;
+        margin-bottom: unset;
+    }
+    .symptoms_slider .swiper-slide>div>div {
+        max-height: 210px;
+        min-height: 210px;
+    }
+
+
+  
+
+
+   
 }
 
 @media (min-width: 1200px) {
