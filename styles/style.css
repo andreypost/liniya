@@ -17,6 +17,10 @@ body {
     display: none;
 }
 
+.block {
+    display: block;
+}
+
 .flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -286,12 +290,22 @@ button, .header_mob_burger {
 
 
 
+.canvas {
+  position: fixed;
+  top     : 0;
+  left    : 0;
+  width   : 100%;
+  height  : 100%;
+  overflow: auto;
+  background: rgba(21, 30, 53, 0.5);
+  z-index   : 99;
+}
 
 
 
-
-
-
+body.active {
+    overflow: hidden;
+  }
 
 
 @media (min-width: 576px) {

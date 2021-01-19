@@ -1,38 +1,58 @@
+var body = document.querySelector('body')
 
-var menu = document.querySelector('.header_nav')
-document.querySelector('.header_mob_burger').onclick = function (e) {
-  // console.log(this)
-  menu.classList.toggle('active')
-  this.classList.toggle('active')
+function toggleNavMenu(burger, canvas, nav) {
+  var touchLength = 0
+  function toggle() {
+    burger.classList.toggle('active')
+    canvas.classList.toggle('block')
+    nav.classList.toggle('active')
+    body.classList.toggle('active')
+  }
+  burger.onclick = function () {
+    toggle()
+  }
+  nav.ontouchstart = function (e) {
+    touchLength = e.touches[0].clientX
+  }
+  nav.ontouchend = function (e) {
+    if (touchLength > (e.changedTouches[0].clientX + 60)) toggle()
+  }
+  nav.onclick = function (e) {
+    if (this.classList.contains('active') && e.target.tagName === 'A') toggle()
+  }
+  window.addEventListener('click', function (e) {
+    if (e.target === canvas) toggle()
+  })
 }
+toggleNavMenu(document.querySelector('.header_mob_burger'), document.querySelector('.canvas'), document.querySelector('.header_nav'))
 
 
 
 // var appendNumber = 4;
 // var prependNumber = 3;
 
-  var swiper = new Swiper('.symptoms .swiper-container', {
-    // initialSlide: 0,
-    slidesPerView: 1,
-    spaceBetween: 26,
-    breakpoints: {
-      992: {
-        slidesPerView: 1.5,
-        centeredSlides: true,
-        centeredSlidesBounds: true,
-      }
-    },
-    // pagination: {
-      // el: '.swiper-pagination',
-      // clickable: true,
-    // },
-    navigation: {
-      prevEl: '.swiper-button-prev',
-      nextEl: '.swiper-button-next',
-    },
-  });
+var swiper = new Swiper('.symptoms .swiper-container', {
+  // initialSlide: 0,
+  slidesPerView: 1,
+  spaceBetween: 26,
+  breakpoints: {
+    992: {
+      slidesPerView: 1.5,
+      centeredSlides: true,
+      centeredSlidesBounds: true,
+    }
+  },
+  // pagination: {
+  // el: '.swiper-pagination',
+  // clickable: true,
+  // },
+  navigation: {
+    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next',
+  },
+});
 
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
 
 })
 
