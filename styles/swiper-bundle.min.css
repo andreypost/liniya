@@ -609,8 +609,19 @@ button.swiper-pagination-bullet {
         right: 2%;
     }
     .swiper-button-next, .swiper-button-prev {
-        bottom: -11%;
+        bottom: -14.5%;
         width: 72px;
         height: 72px;
+    }
+    .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+        bottom: -13%;
+    }
+    .swiper-button-prev:after, .swiper-button-next:after {
+        width: 33px;
+        height: 32px;
+    }
+    .swiper-button-next.swiper-button-disabled::after, .swiper-button-prev.swiper-button-disabled::after {
+        width: 25px;
+        height: 25px;
     }
 }
