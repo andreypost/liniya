@@ -31,7 +31,7 @@ toggleNavMenu(document.querySelector('.header_mob_burger'), document.querySelect
 // var appendNumber = 4;
 // var prependNumber = 3;
 
-var swiper = new Swiper('.symptoms .swiper-container', {
+new Swiper('.symptoms .swiper-container', {
   // initialSlide: 0,
   slidesPerView: 1,
   spaceBetween: 26,
@@ -46,6 +46,20 @@ var swiper = new Swiper('.symptoms .swiper-container', {
   // el: '.swiper-pagination',
   // clickable: true,
   // },
+  navigation: {
+    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next',
+  },
+});
+
+new Swiper('.experts .swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  breakpoints: {
+    992: {
+      slidesPerView: 2,
+    }
+  },
   navigation: {
     prevEl: '.swiper-button-prev',
     nextEl: '.swiper-button-next',

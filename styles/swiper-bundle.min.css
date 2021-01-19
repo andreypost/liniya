@@ -146,7 +146,6 @@
 
 .swiper-button-next, .swiper-button-prev {
     position: absolute;
-    bottom: -15%;
     width: 60px;
     height: 60px;
     z-index: 10;
@@ -168,6 +167,14 @@
     align-items: center;
     justify-content: center;
     color: var(--swiper-navigation-color, var(--swiper-theme-color)) */
+}
+
+.symptoms .swiper-button-next, .symptoms .swiper-button-prev {
+    bottom: -20%;
+}
+
+.experts .swiper-button-next, .experts .swiper-button-prev {
+    bottom: -16%;
 }
 
 .swiper-button-next::after {
@@ -219,7 +226,7 @@
 }
 
 .swiper-button-next:focus, .swiper-button-prev:focus {
-  outline: none;
+    outline: none;
 }
 
 /* .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
@@ -599,22 +606,28 @@ button.swiper-pagination-bullet {
     backface-visibility: hidden
 }
 
-
 @media (min-width: 992px) {
     .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
         left: 80%;
     }
-    
     .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
         right: 2%;
     }
     .swiper-button-next, .swiper-button-prev {
-        bottom: -14.5%;
         width: 72px;
         height: 72px;
     }
-    .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+    .symptoms .swiper-button-next, .symptoms .swiper-button-prev {
+        bottom: -25%;
+    }
+    .experts .swiper-button-next, .experts .swiper-button-prev {
         bottom: -13%;
+    }
+    .symptoms .swiper-button-next.swiper-button-disabled, .symptoms .swiper-button-prev.swiper-button-disabled {
+        bottom: -23%;
+    }
+    .experts .swiper-button-next.swiper-button-disabled, .experts .swiper-button-prev.swiper-button-disabled {
+        bottom: -11.5%;
     }
     .swiper-button-prev:after, .swiper-button-next:after {
         width: 33px;

@@ -70,6 +70,14 @@ h2 {
     font-size: 28px;
 }
 
+h3 {
+    font-size: 23px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
 .symptoms h2 {
     font-size: 17px;
 }
@@ -78,12 +86,16 @@ h1 {
     font-size: 16px;
 }
 
-h3 {
-    font-size: 23px;
-}
-
 .header_nav a {
     font-size: 15px;
+}
+
+.experts p {
+    font-size: 13px;
+}
+
+h5 {
+    font-size: 12px;
 }
 
 .font_normal {
@@ -175,13 +187,11 @@ button, .header_mob_burger {
 
 .header_nav li:not(:nth-of-type(1)) a {
     border-top: 2px solid #9576AD;
-    ;
 }
 
 .header_mob_burger {
     height: 34px;
     margin-right: 32px;
-    margin-left: 15px;
 }
 
 .header_mob_burger span {
@@ -243,23 +253,28 @@ button, .header_mob_burger {
 }
 
 /* symptoms section */
+
 .symptoms {
     margin-bottom: 128px;
 }
+
 .symptoms h2 {
     max-width: 360px;
     margin: 0 auto 23px;
     line-height: 21px;
 }
-.symptoms_slider .swiper-slide>div {
+
+.symptoms .swiper-slide>div {
     max-height: 410px;
     min-height: 410px;
 }
-.symptoms_slider .swiper-slide>div {
+
+.symptoms .swiper-slide>div {
     box-sizing: border-box;
     padding: 23px 10px 10px;
 }
-.symptoms_slider .swiper-slide>div img {
+
+.symptoms .swiper-slide img {
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -269,44 +284,81 @@ button, .header_mob_burger {
     bottom: 0;
     z-index: -9;
 }
+
 .symptoms .swiper-slide h3 {
     margin-bottom: 30px;
 }
-.symptoms_slider .swiper-slide>div>div {
-    max-height: 315px;
-    min-height: 315px;
+
+.symptoms .swiper-slide>div>div {
+    max-height: 313px;
+    min-height: 313px;
     overflow: hidden;
 }
+
 .symptoms .swiper-slide p {
     font-size: 11px;
     line-height: 13px;
     margin-bottom: 13px;
 }
+
 .symptoms .swiper-slide p span {
     font-weight: bold;
 }
 
+/* experts section */
 
-
-
-
-.canvas {
-  position: fixed;
-  top     : 0;
-  left    : 0;
-  width   : 100%;
-  height  : 100%;
-  overflow: auto;
-  background: rgba(21, 30, 53, 0.5);
-  z-index   : 99;
+.experts .swiper-slide {
+    background: #241832;
+    box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.2);
 }
 
+.experts .swiper-slide img {
+    width: 100%;
+}
 
+.experts .swiper-slide>div {
+    padding-bottom: 35px;
+}
+
+.experts .swiper-slide article {
+    padding: 25px 15px 0;
+    max-height: 268px;
+    min-height: 268px;
+    overflow: hidden;
+}
+
+.experts h4 {
+    margin-top: unset;
+    margin-bottom: 35px;
+}
+
+.experts p {
+    line-height: 16px;
+}
+
+.experts h5 {
+    margin-top: 132px;
+    line-height: 15px;
+}
+
+.experts {
+    margin-bottom: 105px;
+}
+
+.canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(21, 30, 53, 0.5);
+    z-index: 99;
+}
 
 body.active {
     overflow: hidden;
-  }
-
+}
 
 @media (min-width: 576px) {
     .section, .header_nav ul {
@@ -374,14 +426,13 @@ body.active {
     .symptoms {
         margin-bottom: 190px;
     }
-
     .symptoms h2 {
         max-width: 600px;
         margin-bottom: 137px;
         font-size: 28px;
         line-height: 34px;
     }
-    .symptoms_slider .swiper-slide>div {
+    .symptoms .swiper-slide>div {
         max-height: 295px;
         min-height: 295px;
         display: -webkit-box;
@@ -396,16 +447,21 @@ body.active {
         margin-right: 60px;
         margin-bottom: unset;
     }
-    .symptoms_slider .swiper-slide>div>div {
+    .symptoms .swiper-slide>div>div {
         max-height: 210px;
         min-height: 210px;
     }
-
-
-  
-
-
-   
+    .experts .swiper-slide article {
+        max-height: 172px;
+        min-height: 172px;
+    }
+    .experts h5 {
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 17px;
+        line-height: 21px;
+    }
 }
 
 @media (min-width: 1200px) {
