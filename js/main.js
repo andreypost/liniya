@@ -1,30 +1,32 @@
 var body = document.querySelector('body')
 
-function toggleNavMenu(burger, canvas, nav) {
-  var touchLength = 0
+function toggleNavMenu(nav, canvas, menu) {
+  var touchLength = 0, burger = nav.querySelector('.header_mob_burger')
   function toggle() {
-    burger.classList.toggle('active')
-    canvas.classList.toggle('block')
-    nav.classList.toggle('active')
-    body.classList.toggle('active')
+    if (burger.classList.contains('active')) {
+      burger.classList.remove('active')
+      canvas.classList.remove('block')
+      menu.classList.remove('active')
+      body.style.overflowY = ''
+      body.style.paddingRight = `${0}px`
+      nav.style.paddingRight = `${15}px`
+      return
+    }
+    burger.classList.add('active')
+    canvas.classList.add('block')
+    menu.classList.add('active')
+    var width = document.documentElement.clientWidth
+    body.style.overflowY = 'hidden'
+    body.style.paddingRight = `${document.documentElement.clientWidth - width}px`
+    nav.style.paddingRight = `${document.documentElement.clientWidth - width + 15}px`
   }
-  burger.onclick = function () {
-    toggle()
-  }
-  nav.ontouchstart = function (e) {
-    touchLength = e.touches[0].clientX
-  }
-  nav.ontouchend = function (e) {
-    if (touchLength > (e.changedTouches[0].clientX + 60)) toggle()
-  }
-  nav.onclick = function (e) {
-    if (this.classList.contains('active') && e.target.tagName === 'A') toggle()
-  }
-  window.addEventListener('click', function (e) {
-    if (e.target === canvas) toggle()
-  })
+  burger.onclick = function () { toggle() }
+  menu.ontouchstart = function (e) { touchLength = e.touches[0].clientX }
+  menu.ontouchend = function (e) { if (touchLength > (e.changedTouches[0].clientX + 60)) toggle() }
+  menu.onclick = function (e) { if (this.classList.contains('active') && e.target.tagName === 'A') toggle() }
+  window.addEventListener('click', function (e) { if (e.target === canvas) toggle() })
 }
-toggleNavMenu(document.querySelector('.header_mob_burger'), document.querySelector('.canvas'), document.querySelector('.header_nav'))
+toggleNavMenu(document.querySelector('.header_mob nav'), document.querySelector('.canvas'), document.querySelector('.header_nav_menu'))
 
 
 
