@@ -110,6 +110,10 @@ h5 {
     font-size: 12px;
 }
 
+h5 {
+    line-height: 15px;
+}
+
 .font_normal {
     font-weight: 400;
 }
@@ -165,7 +169,7 @@ button {
     cursor: pointer;
 }
 
-.header_nav_menu a {
+.header_nav_menu a, .swiper-container {
     user-select: none;
 }
 
@@ -344,7 +348,7 @@ button {
     font-weight: bold;
 }
 
-/* experts section */
+/* experts, individual sections */
 
 .experts .swiper-slide {
     background: #241832;
@@ -373,23 +377,16 @@ button {
 
 .experts h5 {
     margin-top: 132px;
-    line-height: 15px;
 }
 
-.experts {
+.experts, .individual, .comments {
     margin-bottom: 105px;
-}
-
-/* individual section */
-
-.individual h5 {
-    margin-bottom: 100px;
 }
 
 /* comments section */
 
-.comments {
-    padding-bottom: 143px;
+.comments>div {
+    margin-bottom: 143px;
 }
 
 .comments h2 {
@@ -514,32 +511,50 @@ button {
         font-size: 17px;
         line-height: 21px;
     }
+
+    .individual {
+        margin-bottom: 133px;
+    }
     .individual h2 {
         margin-bottom: 60px;
     }
 
-    .individual h5 {
+    .individual h5, .comments h5 {
         max-width: 920px;
-        margin: 0 auto 133px;
+        margin: 0 auto;
         font-size: 20px;
         line-height: 24px;
+    }
+
+
+    .comments {
+        margin-bottom: 160px;
+    }
+
+    .comments>div {
+        margin-bottom: 150px;
     }
 
     .comments h2 {
         margin-bottom: 90px;
     }
 
-    .comments .swiper-slide {
-        transition: margin-top .2s;
+    .comments .swiper-slide>div {
+        min-height: 680px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
     }
 
-    .comments .swiper-slide-next {
-        margin-top: -75px;
-    }
-
-    .comments img {
+    .comments .swiper-slide img {
         max-height: 610px;
         min-height: 610px;
+        margin-bottom: unset;
+        transition: margin-bottom .4s;
+    }
+
+    .comments .swiper-slide-next img {
+        margin-bottom: 20%;
     }
 
     .comments .swiper-pagination {
