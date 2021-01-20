@@ -169,7 +169,7 @@
     color: var(--swiper-navigation-color, var(--swiper-theme-color)) */
 }
 
-.symptoms .swiper-button-next, .symptoms .swiper-button-prev {
+.symptoms .swiper-button-next, .comments .swiper-button-next, .symptoms .swiper-button-prev, .comments .swiper-button-prev {
     bottom: -20%;
 }
 

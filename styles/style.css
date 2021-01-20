@@ -31,8 +31,12 @@ body {
     display: inline-block;
 }
 
-.header_nav_menu a, .header_mob, .header_nav_menu {
+.header_nav_menu a, .header_mob, .header_nav_menu, img, .canvas {
     width: 100%;
+}
+
+img, .canvas {
+    height: 100%;
 }
 
 .justify_center {
@@ -148,10 +152,6 @@ ul {
     overflow: hidden;
 } */
 
-button {
-    cursor: pointer;
-}
-
 :root {
     /* --blue: #5A17FF; */
     --yellow: #F3C623;
@@ -159,6 +159,14 @@ button {
 
 .white, .header_nav_menu a {
     color: #ffffff;
+}
+
+button {
+    cursor: pointer;
+}
+
+.header_nav_menu a {
+    user-select: none;
 }
 
 /* header section */
@@ -309,8 +317,6 @@ button {
 
 .symptoms .swiper-slide img {
     object-fit: cover;
-    width: 100%;
-    height: 100%;
     left: 0;
     right: 0;
     top: 0;
@@ -345,10 +351,6 @@ button {
     box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.2);
 }
 
-.experts .swiper-slide img {
-    width: 100%;
-}
-
 .experts .swiper-slide>div {
     padding-bottom: 35px;
 }
@@ -378,20 +380,37 @@ button {
     margin-bottom: 105px;
 }
 
+/* individual section */
+
+.individual h5 {
+    margin-bottom: 100px;
+}
+
+/* comments section */
+
+.comments {
+    padding-bottom: 143px;
+}
+
+.comments h2 {
+    margin-bottom: 36px;
+}
+
+.comments img {
+    max-height: 410px;
+    min-height: 410px;
+    object-fit: contain;
+}
+
+
 .canvas {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     overflow: auto;
     background: rgba(21, 30, 53, 0.5);
     z-index: 99;
 }
-
-/* body.active {
-    overflow: hidden;
-} */
 
 @media (min-width: 576px) {
     .section, .header_nav_menu ul {
@@ -495,6 +514,38 @@ button {
         font-size: 17px;
         line-height: 21px;
     }
+    .individual h2 {
+        margin-bottom: 60px;
+    }
+
+    .individual h5 {
+        max-width: 920px;
+        margin: 0 auto 133px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .comments h2 {
+        margin-bottom: 90px;
+    }
+
+    .comments .swiper-slide {
+        transition: margin-top .2s;
+    }
+
+    .comments .swiper-slide-next {
+        margin-top: -75px;
+    }
+
+    .comments img {
+        max-height: 610px;
+        min-height: 610px;
+    }
+
+    .comments .swiper-pagination {
+        display: block;
+    }
+    
 }
 
 @media (min-width: 1200px) {

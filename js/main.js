@@ -44,10 +44,6 @@ new Swiper('.symptoms .swiper-container', {
       centeredSlidesBounds: true,
     }
   },
-  // pagination: {
-  // el: '.swiper-pagination',
-  // clickable: true,
-  // },
   navigation: {
     prevEl: '.swiper-button-prev',
     nextEl: '.swiper-button-next',
@@ -61,6 +57,30 @@ new Swiper('.experts .swiper-container', {
     992: {
       slidesPerView: 2,
     }
+  },
+  navigation: {
+    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next',
+  },
+});
+
+new Swiper('.comments .swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  breakpoints: {
+    420: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    992: {
+      slidesPerView: 3,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    },
   },
   navigation: {
     prevEl: '.swiper-button-prev',
