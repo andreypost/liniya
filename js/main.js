@@ -1,6 +1,5 @@
 'use strict';
 var body = document.querySelector('body')
-
 function toggleNavMenu(nav, canvas, menu) {
   var touchLength = 0, burger = nav.querySelector('.header_mob_burger')
   function toggle() {
@@ -28,12 +27,6 @@ function toggleNavMenu(nav, canvas, menu) {
   window.addEventListener('click', function (e) { if (e.target === canvas) toggle() })
 }
 toggleNavMenu(document.querySelector('.header_mob nav'), document.querySelector('.canvas'), document.querySelector('.header_nav_menu'))
-
-
-
-// var appendNumber = 4;
-// var prependNumber = 3;
-
 new Swiper('.symptoms .swiper-container', {
   // initialSlide: 0,
   slidesPerView: 1,
@@ -56,7 +49,6 @@ new Swiper('.symptoms .swiper-container', {
     nextEl: '.swiper-button-next',
   },
 });
-
 new Swiper('.experts .swiper-container', {
   slidesPerView: 1,
   spaceBetween: 25,
@@ -76,7 +68,6 @@ new Swiper('.experts .swiper-container', {
     nextEl: '.swiper-button-next',
   },
 });
-
 new Swiper('.comments .swiper-container', {
   slidesPerView: 1,
   spaceBetween: 25,
@@ -100,32 +91,5 @@ new Swiper('.comments .swiper-container', {
     nextEl: '.swiper-button-next',
   },
 });
-
-window.addEventListener('resize', function () {
-
-})
-
-// document.querySelector('.prepend-2-slides').addEventListener('click', function (e) {
-//   e.preventDefault();
-//   swiper.prependSlide([
-//     '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>',
-//     '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>'
-//     ]);
-// });
-// document.querySelector('.prepend-slide').addEventListener('click', function (e) {
-//   e.preventDefault();
-//   swiper.prependSlide('<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>');
-// });
-// document.querySelector('.append-slide').addEventListener('click', function (e) {
-//   e.preventDefault();
-//   swiper.appendSlide('<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>');
-// });
-// document.querySelector('.append-2-slides').addEventListener('click', function (e) {
-//   e.preventDefault();
-//   swiper.appendSlide([
-//     '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>',
-//     '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>'
-//     ]);
-// });
 
 
