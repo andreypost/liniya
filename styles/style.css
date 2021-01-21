@@ -9,7 +9,7 @@ body {
 }
 
 .section, .header_nav_menu ul {
-    max-width: 375px;
+    max-width: 425px;
     padding: 0 15px;
 }
 
@@ -62,7 +62,7 @@ img, .canvas {
     flex-direction: column;
 }
 
-h1, h3, p {
+h1, h3, h5, p {
     margin: 0;
 }
 
@@ -267,6 +267,9 @@ button {
     margin-top: 133px;
     margin-bottom: 23px;
     padding: 25px 5px;
+}
+
+.header_banner_text, .individual {
     border-right: 3px solid var(--yellow);
     border-left: 3px solid var(--yellow);
 }
@@ -297,10 +300,10 @@ button {
     line-height: 19px;
 }
 
-/* symptoms section */
+/* symptoms, experts, individual sections */
 
-.symptoms {
-    margin-bottom: 128px;
+.symptoms, .experts>div {
+    margin-bottom: 130px;
 }
 
 .symptoms h2 {
@@ -347,12 +350,18 @@ button {
 .symptoms .swiper-slide p span {
     font-weight: bold;
 }
+/**/
 
-/* experts, individual sections */
+.experts, .individual, .comments {
+    margin-bottom: 105px;
+}
+
+.swiper-container, .swiper-slide {
+    box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.2);
+}
 
 .experts .swiper-slide {
     background: #241832;
-    box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.2);
 }
 
 .experts .swiper-slide>div {
@@ -366,8 +375,11 @@ button {
     overflow: hidden;
 }
 
-.experts h4 {
+.experts h2, .experts h4, .individual h2 {
     margin-top: unset;
+}
+
+.experts h2, .experts h4 {
     margin-bottom: 35px;
 }
 
@@ -375,12 +387,15 @@ button {
     line-height: 16px;
 }
 
-.experts h5 {
-    margin-top: 132px;
+.experts h5, .individual h5, .comments h5 {
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.experts, .individual, .comments {
-    margin-bottom: 105px;
+
+
+.individual {
+    padding: 20px 25px;
 }
 
 /* comments section */
@@ -500,43 +515,48 @@ button {
         max-height: 210px;
         min-height: 210px;
     }
+    .experts h2 {
+        margin-bottom: 75px;
+    }
+    .experts {
+        margin-bottom: 130px;
+    }
+    .experts>div {
+        margin-bottom: 65px;
+    }
     .experts .swiper-slide article {
         max-height: 172px;
         min-height: 172px;
     }
     .experts h5 {
         max-width: 760px;
-        margin-left: auto;
-        margin-right: auto;
         font-size: 17px;
         line-height: 21px;
     }
 
-    .individual {
-        margin-bottom: 133px;
+    .individual, .comments {
+        margin-bottom: 113px;
     }
+
+    .individual {
+        padding-bottom: 50px;
+    }
+
     .individual h2 {
         margin-bottom: 60px;
     }
 
     .individual h5, .comments h5 {
         max-width: 920px;
-        margin: 0 auto;
         font-size: 20px;
         line-height: 24px;
     }
-
-
-    .comments {
-        margin-bottom: 160px;
-    }
-
-    .comments>div {
+   .comments>div {
         margin-bottom: 150px;
     }
 
     .comments h2 {
-        margin-bottom: 90px;
+        margin-bottom: 96px;
     }
 
     .comments .swiper-slide>div {

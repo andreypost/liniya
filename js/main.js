@@ -1,3 +1,4 @@
+'use strict';
 var body = document.querySelector('body')
 
 function toggleNavMenu(nav, canvas, menu) {
@@ -36,8 +37,14 @@ toggleNavMenu(document.querySelector('.header_mob nav'), document.querySelector(
 new Swiper('.symptoms .swiper-container', {
   // initialSlide: 0,
   slidesPerView: 1,
-  spaceBetween: 26,
+  spaceBetween: 25,
   breakpoints: {
+    425: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
     992: {
       slidesPerView: 1.5,
       centeredSlides: true,
@@ -52,8 +59,14 @@ new Swiper('.symptoms .swiper-container', {
 
 new Swiper('.experts .swiper-container', {
   slidesPerView: 1,
-  spaceBetween: 30,
+  spaceBetween: 25,
   breakpoints: {
+    425: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
     992: {
       slidesPerView: 2,
     }
@@ -66,9 +79,9 @@ new Swiper('.experts .swiper-container', {
 
 new Swiper('.comments .swiper-container', {
   slidesPerView: 1,
-  spaceBetween: 30,
+  spaceBetween: 25,
   breakpoints: {
-    420: {
+    425: {
       slidesPerView: 2,
     },
     768: {
