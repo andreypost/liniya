@@ -266,7 +266,7 @@ button {
 .header_banner_text {
     margin-top: 133px;
     margin-bottom: 23px;
-    padding: 25px 5px;
+    padding: 25px 6px;
 }
 
 .header_banner_text, .individual {
@@ -422,6 +422,12 @@ button {
     overflow: auto;
     background: rgba(21, 30, 53, 0.5);
     z-index: 99;
+}
+
+@media (min-width: 425px) {
+    .header_banner_text {
+        padding: 25px;
+    }
 }
 
 @media (min-width: 576px) {
