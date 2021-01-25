@@ -62,7 +62,7 @@ img, .canvas {
     flex-direction: column;
 }
 
-h1, h3, h6, p {
+h1, h3, h4, h6, p {
     margin: 0;
 }
 
@@ -74,7 +74,7 @@ button {
     text-align: center;
 }
 
-.section, .header_nav_menu ul {
+.section, .header_nav_menu ul, .about>section, .about>section h4, h2 {
     margin: 0 auto;
 }
 
@@ -86,12 +86,16 @@ h1 {
     font-size: 16px;
 }
 
-.experts p {
+.about>section h4, .experts p {
     font-size: 13px;
 }
 
 h6 {
     font-size: 12px;
+}
+
+.about>section h4, .experts p {
+    line-height: 16px;
 }
 
 h6 {
@@ -284,7 +288,7 @@ button {
     line-height: 19px;
 }
 
-/* about section */
+/* about, cases, symptoms, experts, individual section */
 
 .about h5 {
     font-size: 14px;
@@ -295,20 +299,51 @@ button {
     max-width: 540px;
 }
 
+.about>section {
+    max-width: 980px;
+    padding: 45px 15px;
+    color: #000000;
+    background-color: var(--yellow);
+}
 
+.about>div:last-of-type, .about, .cases {
+    margin-bottom: 50px;
+}
 
+.cases h2 {
+    font-size: 21px;
+    line-height: 26px;
+}
 
+.cases h4 {
+    font-size: 19px;
+    line-height: 24px;
+}
 
+.cases>div {
+    min-width: 345px;
+    max-width: 345px;
+    min-height: 250px;
+    max-height: 250px;
+}
 
-/* symptoms, experts, individual sections */
+.cases>div img {
+    object-fit: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -9;
+    background-color: #000000;
+}
+
 
 .symptoms, .experts>div {
     margin-bottom: 130px;
 }
 
 .symptoms h2 {
-    max-width: 360px;
-    margin: 0 auto 23px;
+    margin-bottom: 23px;
     font-size: 17px;
     line-height: 21px;
 }
@@ -381,24 +416,14 @@ button {
     font-size: 20px;
 }
 
-.experts h2, .experts h4, .individual h2 {
-    margin-top: unset;
-}
-
-.experts h2, .experts h4 {
+.cases h2, .experts h2, .experts h4, .comments h2, .individual h2 {
     margin-bottom: 35px;
-}
-
-.experts p {
-    line-height: 16px;
 }
 
 .experts h6, .individual h6, .comments h6 {
     margin-left: auto;
     margin-right: auto;
 }
-
-
 
 .individual {
     padding: 20px 25px;
@@ -410,16 +435,11 @@ button {
     margin-bottom: 143px;
 }
 
-.comments h2 {
-    margin-bottom: 36px;
-}
-
 .comments img {
     max-height: 410px;
     min-height: 410px;
     object-fit: contain;
 }
-
 
 .canvas {
     position: fixed;
@@ -451,6 +471,9 @@ button {
 @media (min-width: 992px) {
     .header_mob {
         display: none;
+    }
+    .cases h3 {
+        display: block;
     }
     .section {
         max-width: 960px;
@@ -518,12 +541,23 @@ button {
     .about>div:nth-of-type(1), .symptoms {
         margin-bottom: 190px;
     }
-    .symptoms h2 {
-        max-width: 600px;
-        margin-bottom: 137px;
+
+    .about>section {
+        padding: 70px 15px;
+    }
+
+    .about>section h4, .cases h2, .symptoms h2 {
+        max-width: 640px;
         font-size: 28px;
         line-height: 34px;
     }
+
+    .cases h3 {
+        font-size: 21px;
+    }
+
+
+
     .symptoms .swiper-slide>div {
         max-height: 295px;
         min-height: 295px;
@@ -546,7 +580,7 @@ button {
     .experts h2 {
         margin-bottom: 75px;
     }
-    .about>div:nth-of-type(2), .experts {
+    .about>div:nth-of-type(2), .symptoms h2, .experts {
         margin-bottom: 130px;
     }
     .experts>div {
@@ -562,8 +596,8 @@ button {
         line-height: 21px;
     }
 
-    .individual, .comments {
-        margin-bottom: 113px;
+    .about, .cases, .individual, .comments {
+        margin-bottom: 110px;
     }
 
     .individual {
@@ -583,7 +617,7 @@ button {
         margin-bottom: 150px;
     }
 
-    .about>div:last-of-type, .comments h2 {
+    .cases h3, .about>div:last-of-type, .comments h2 {
         margin-bottom: 96px;
     }
 
