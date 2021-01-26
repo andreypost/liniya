@@ -31,11 +31,11 @@ body {
     display: inline-block;
 }
 
-.cases_article article, .symptoms .swiper-slide>div {
+.cases_article article, .symptoms .swiper-slide>div, input, textarea, form button {
     box-sizing: border-box;
 }
 
-.header_nav_menu a, .header_mob, .header_nav_menu, img, .canvas {
+.header_nav_menu a, .header_mob, .header_nav_menu, img, form, input, textarea, form button, .canvas {
     width: 100%;
 }
 
@@ -82,7 +82,7 @@ button {
     text-align: center;
 }
 
-.section, .header_nav_menu ul, .about>section, .about>section h4, h2 {
+.section, .header_nav_menu ul, .about>section, .about>section h4, h2, footer>p {
     margin: 0 auto;
 }
 
@@ -94,7 +94,7 @@ h1 {
     font-size: 16px;
 }
 
-.about>section h4, .experts p {
+.about>section h4, .experts p, footer>p {
     font-size: 13px;
 }
 
@@ -138,7 +138,7 @@ a, a:hover {
     text-decoration: none;
 }
 
-a:focus, button:focus, .header_mob_burger span:focus, .header_nav_menu li {
+a:focus, button:focus, input:focus, textarea:focus, .header_mob_burger span:focus, .header_nav_menu li {
     outline: none;
 }
 
@@ -161,7 +161,7 @@ ul {
     --yellow: #F3C623;
 }
 
-.white, .header_nav_menu a {
+.white, .header_nav_menu a, input, textarea {
     color: #ffffff;
 }
 
@@ -171,6 +171,11 @@ button {
 
 .header_nav_menu a, main {
     user-select: none;
+}
+
+.header_mob_burger span, .header_mob_burger span:after, .header_mob_burger span:before,
+.about>section, form button {
+    background-color: var(--yellow);
 }
 
 /* header section */
@@ -225,7 +230,6 @@ button {
     border-radius: 2px;
     transform-origin: 50% 50%;
     transform: translateY(0);
-    background-color: var(--yellow);
     transition: all .45s cubic-bezier(.45,.45,.37,1.36);
 }
 
@@ -269,7 +273,7 @@ button {
     padding: 25px 6px;
 }
 
-.header_banner_text, .individual {
+.header_banner_text, .individual, .form_result>div {
     border-right: 3px solid var(--yellow);
     border-left: 3px solid var(--yellow);
 }
@@ -300,7 +304,7 @@ button {
     line-height: 19px;
 }
 
-/* about, cases, symptoms, experts, individual section */
+/* about, cases, symptoms, experts, individual, comments sections */
 
 .about h5 {
     font-size: 14px;
@@ -315,7 +319,6 @@ button {
     max-width: 980px;
     padding: 45px 15px;
     color: #000000;
-    background-color: var(--yellow);
 }
 
 .about>div:last-of-type, .about, .cases {
@@ -348,7 +351,7 @@ button {
     font-weight: inherit;
 }
 
-.cases_article article h4, .symptoms h2 {
+.cases_article article h4, .symptoms h2, textarea {
     margin-bottom: 23px;
 }
 
@@ -359,12 +362,6 @@ button {
 .cases_article article img {
     background-color: #000000;
 }
-
-
-
-
-
-
 
 .symptoms, .experts>div {
     margin-bottom: 130px;
@@ -406,15 +403,17 @@ button {
 
 .symptoms .swiper-slide p {
     font-size: 11px;
+}
+
+.symptoms .swiper-slide p, input {
     margin-bottom: 13px;
 }
 
 .symptoms .swiper-slide p span {
     font-weight: bold;
 }
-/**/
 
-.experts, .individual, .comments {
+.experts, .individual, .comments, .footer_contact {
     margin-bottom: 105px;
 }
 
@@ -441,7 +440,7 @@ button {
     font-size: 20px;
 }
 
-.cases h2, .experts h2, .experts h4, .comments h2, .individual h2 {
+.cases h2, .experts h2, .experts h4, .comments h2, .individual h2, footer>p {
     margin-bottom: 35px;
 }
 
@@ -454,8 +453,6 @@ button {
     padding: 20px 25px;
 }
 
-/* comments section */
-
 .comments>div {
     margin-bottom: 143px;
 }
@@ -465,6 +462,53 @@ button {
     min-height: 410px;
     object-fit: contain;
 }
+
+footer>h2, .footer_contact img {
+    margin-bottom: 40px;
+}
+
+.form_result {
+    top: 135px;
+    left: 0;
+    right: 0;
+    transition: opacity .2s;
+}
+
+.form_result>div {
+    padding: 25px 0;
+    color: var(--yellow);
+}
+
+.footer_contact img {
+    /* margin-bottom: 74px; */
+    transition: margin-bottom .2s;
+}
+
+input, textarea, form button {
+    max-width: 470px;
+    height: 55px;
+}
+
+input, textarea {
+    padding: 20px 25px;
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+}
+
+textarea {
+    height: 190px;
+}
+
+form button {
+    height: 78px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #B5B5B5;
+}
+
+
+
 
 .canvas {
     position: fixed;
@@ -547,20 +591,19 @@ button {
         line-height: 27px;
         letter-spacing: -1px;
     }
-    .about>div {
+    .about>div, .footer_contact {
         flex-flow: row;
-        margin-bottom: 70px;
     }
 
     .about>div:nth-child(odd) article, .about>div:nth-child(even) img {
         margin-right: 30px;
     }
 
-    .about>div:nth-child(even) img {
+    .about>div:nth-child(even) img, .footer_contact form {
         order: 1;
     }
 
-    .about>div:nth-child(even) article {
+    .about>div:nth-child(even) article, .footer_contact picture {
         order: 2;
     }
     .about>div:nth-of-type(1), .symptoms {
@@ -596,12 +639,7 @@ button {
         line-height: 16px;
         -webkit-line-clamp: 5;
     }
-
-    
-
-
-
-    .symptoms .swiper-slide>div {
+   .symptoms .swiper-slide>div {
         max-height: 295px;
         min-height: 295px;
         display: -webkit-box;
@@ -620,15 +658,15 @@ button {
         max-height: 210px;
         min-height: 210px;
     }
-    .experts h2 {
+
+    .about>div:nth-of-type(3), .experts h2, .experts>div {
         margin-bottom: 75px;
     }
+
     .about>div:nth-of-type(2), .cases, .symptoms h2, .experts {
         margin-bottom: 130px;
     }
-    .experts>div {
-        margin-bottom: 65px;
-    }
+
     .experts .swiper-slide article {
         max-height: 172px;
         min-height: 172px;
@@ -639,7 +677,7 @@ button {
         line-height: 21px;
     }
 
-    .about, .individual, .comments {
+    .about, .individual, .comments, footer>p  {
         margin-bottom: 110px;
     }
 
@@ -651,13 +689,13 @@ button {
         margin-bottom: 60px;
     }
 
-    .about h5, .cases_article article h4, .individual h6, .comments h6 {
+    .about h5, .cases_article article h4, .individual h6, .comments h6, footer>p {
         max-width: 920px;
         font-size: 20px;
         line-height: 24px;
     }
 
-   .comments>div {
+   .comments>div, .footer_contact {
         margin-bottom: 150px;
     }
 
@@ -686,6 +724,24 @@ button {
 
     .comments .swiper-pagination {
         display: block;
+    }
+
+    footer>p {
+        text-align: left;
+    }
+
+    .footer_contact {
+        align-items: flex-start;
+    }
+
+    .footer_contact img {
+        width: 445px;
+        height: 490px;
+    }
+
+
+    .form_result {
+        top: 0;
     }
 
     

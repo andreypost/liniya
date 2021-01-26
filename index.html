@@ -39,7 +39,7 @@
                     <li><a href="#individual">Индивидуальный подход</a></li>
                     <li><a href="#individual">Как работаем</a></li>
                     <li><a href="#comments">Отзывы</a></li>
-                    <li><a href="">Контакты</a></li>
+                    <li><a href="#contact">Контакты</a></li>
                 </ul>
             </nav>
         </div>
@@ -136,8 +136,10 @@
                 <article class="flex flex_column align_center justify_start relative">
                     <h4>Невезение в любви</h4>
                     <p>Трудные отношения с противоположным полом, все отношения заканчиваются расставанием,
-                        продолжительное одиночество, болезненные разрывы, потеря близкого человека Трудные отношения с противоположным полом, все отношения заканчиваются расставанием,
-                        продолжительное одиночество, болезненные разрывы, потеря близкого человека Трудные отношения с противоположным полом, все отношения заканчиваются расставанием,
+                        продолжительное одиночество, болезненные разрывы, потеря близкого человека Трудные отношения с
+                        противоположным полом, все отношения заканчиваются расставанием,
+                        продолжительное одиночество, болезненные разрывы, потеря близкого человека Трудные отношения с
+                        противоположным полом, все отношения заканчиваются расставанием,
                         продолжительное одиночество, болезненные разрывы, потеря близкого человека</p>
                     <img src="./images/case_06.png" alt="" class="absolute">
                 </article>
@@ -375,44 +377,46 @@
                 – это решение для тех, кто потерял веру и надежду. Не забывайте, что работа с потусторонним – это
                 энергетические затраты и силы специалиста.</h6>
         </section>
-
-
-
-
-
-        <form action="" id="connectForm">
-
-
-            <input type="text" name="name" placeholder="Имя" autocomplete="off" required>
-            <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email"
-                autocomplete="off" required>
-
-            <input type="text" name="phone" pattern="^[0-9-+\s()]*$" minlength="8" placeholder="Телефон"
-                autocomplete="off" required>
-
-            <button type="submit" form="connectForm" class="text-white">Отправить</button>
-        </form>
-
-
-        <!-- <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 4</div>
-            </div> -->
-        <!-- Add Pagination -->
-        <!-- <div class="swiper-pagination"></div> -->
-        <!-- Add Arrows -->
-        <!-- <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div> -->
-
-
-
-
     </main>
-    <footer class="section">
+    <footer class="section text_center" id="contact">
+        <h2 class="font_normal">Как с нами связаться</h2>
+        <p>Если вы потеряли в веру в лучшее и себя, свяжитесь с компанией по указанным контактам или заполните форму
+            обратной связи.
+            Помните, выход – есть!</p>
+        
+
+        <div class="flex flex_column align_center justify_between footer_contact relative">
+            <picture>
+                <source media="(max-width: 991px)" srcset="./images/contact_mob.png">
+                <source media="(min-width: 992px)" srcset="./images/contact_desk.png">
+                <img src="./images/contact_mob.png" alt="">
+            </picture>
+
+            <div class="form_result absolute opacity_0">
+                <div class="relative">
+                    <div class="borders_left_top absolute"></div>
+                    <div class="borders_left_bottom absolute"></div>
+                    <p>Спасибо! Сообщение отправлено.</p>
+                    <div class="borders_right_top absolute"></div>
+                    <div class="borders_right_bottom absolute"></div>
+                </div>
+            </div>
+            
+            <form action="" class="flex flex_column align_center justify_between" id="connectForm">
+                
+                
+                <input type="text" name="name" placeholder="Имя" autocomplete="off" required>
+                <input type="text" name="phone" pattern="^[0-9-+\s()]*$" minlength="8" placeholder="Телефон"
+                autocomplete="off" required>
+                <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email"
+                autocomplete="off" required>
+                
+                <textarea name="message" placeholder="Сообщение"></textarea>
+                
+                <button type="submit" form="connectForm">Отправить</button>
+            </form>
+
+        </div>
 
     </footer>
     <div class="canvas none"></div>
