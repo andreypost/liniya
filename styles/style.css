@@ -31,6 +31,10 @@ body {
     display: inline-block;
 }
 
+.cases_article article, .symptoms .swiper-slide>div {
+    box-sizing: border-box;
+}
+
 .header_nav_menu a, .header_mob, .header_nav_menu, img, .canvas {
     width: 100%;
 }
@@ -47,6 +51,10 @@ img, .canvas {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+}
+
+.justify_start {
+    justify-content: flex-start;
 }
 
 .align_center {
@@ -102,6 +110,10 @@ h6 {
     line-height: 15px;
 }
 
+.cases_article article p, .symptoms .swiper-slide p {
+    line-height: 13px;
+}
+
 .font_normal {
     font-weight: 400;
 }
@@ -137,12 +149,12 @@ ul {
     padding-inline-start: unset;
 }
 
-/* {
+.cases_article article p {
     display: -webkit-box;
-    -web-box-orient: vertical;
-    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
     overflow: hidden;
-} */
+}
 
 :root {
     /* --blue: #5A17FF; */
@@ -315,27 +327,43 @@ button {
     line-height: 26px;
 }
 
-.cases h4 {
-    font-size: 19px;
-    line-height: 24px;
+.cases_article {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(290px, 345px)); */
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    /* grid-template-rows: repeat(2, 250px); */
+    grid-gap: 36px;
 }
 
-.cases>div {
-    min-width: 345px;
-    max-width: 345px;
+.cases_article article {
     min-height: 250px;
     max-height: 250px;
+    padding: 70px 35px 0;
 }
 
-.cases>div img {
-    object-fit: cover;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -9;
+.cases_article article h4 {
+    font-size: 19px;
+    line-height: 24px;
+    height: 48px;
+    font-weight: inherit;
+}
+
+.cases_article article h4, .symptoms h2 {
+    margin-bottom: 23px;
+}
+
+.cases_article article p {
+    font-size: 10px;
+}
+
+.cases_article article img {
     background-color: #000000;
 }
+
+
+
+
+
 
 
 .symptoms, .experts>div {
@@ -343,7 +371,6 @@ button {
 }
 
 .symptoms h2 {
-    margin-bottom: 23px;
     font-size: 17px;
     line-height: 21px;
 }
@@ -354,11 +381,10 @@ button {
 }
 
 .symptoms .swiper-slide>div {
-    box-sizing: border-box;
     padding: 23px 10px 10px;
 }
 
-.symptoms .swiper-slide img {
+.cases_article article img, .symptoms .swiper-slide img {
     object-fit: cover;
     left: 0;
     right: 0;
@@ -380,7 +406,6 @@ button {
 
 .symptoms .swiper-slide p {
     font-size: 11px;
-    line-height: 13px;
     margin-bottom: 13px;
 }
 
@@ -393,7 +418,7 @@ button {
     margin-bottom: 105px;
 }
 
-.symptoms .swiper-container, .experts .swiper-container, .swiper-slide {
+.cases_article article, .symptoms .swiper-container, .experts .swiper-container, .swiper-slide {
     box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.2);
 }
 
@@ -556,6 +581,24 @@ button {
         font-size: 21px;
     }
 
+    .cases_article article {
+        min-height: 295px;
+        max-height: 295px;
+        padding: 110px 30px 0;
+    }
+
+    .cases_article article h4 {
+        margin-bottom: 40px;
+    }
+
+    .cases_article article p {
+        font-size: 13px;
+        line-height: 16px;
+        -webkit-line-clamp: 5;
+    }
+
+    
+
 
 
     .symptoms .swiper-slide>div {
@@ -580,7 +623,7 @@ button {
     .experts h2 {
         margin-bottom: 75px;
     }
-    .about>div:nth-of-type(2), .symptoms h2, .experts {
+    .about>div:nth-of-type(2), .cases, .symptoms h2, .experts {
         margin-bottom: 130px;
     }
     .experts>div {
@@ -596,7 +639,7 @@ button {
         line-height: 21px;
     }
 
-    .about, .cases, .individual, .comments {
+    .about, .individual, .comments {
         margin-bottom: 110px;
     }
 
@@ -608,11 +651,12 @@ button {
         margin-bottom: 60px;
     }
 
-    .about h5, .individual h6, .comments h6 {
+    .about h5, .cases_article article h4, .individual h6, .comments h6 {
         max-width: 920px;
         font-size: 20px;
         line-height: 24px;
     }
+
    .comments>div {
         margin-bottom: 150px;
     }

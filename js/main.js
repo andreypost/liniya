@@ -91,5 +91,3 @@ new Swiper('.comments .swiper-container', {
     nextEl: '.swiper-button-next',
   },
 });
-
-
