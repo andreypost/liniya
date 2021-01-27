@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <script>function report_conversion() { console.log(this) }</script>
 </head>
 
 <body>
@@ -18,7 +19,7 @@
         <div class="header_mob absolute">
             <nav class="section flex align_center">
                 <button class="header_mob_burger flex justify_center align_center"><span></span></button>
-                <p class="roboto">Меню</p>
+                <p class="roboto yellow">Меню</p>
             </nav>
         </div>
         <div class="section header_desk">
@@ -152,11 +153,6 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="relative">
-                                <!-- <picture>
-                                <source media="(max-width: 991px)" srcset="./images/symptoms_mask_01_mob.png">
-                                <source media="(min-width: 992px)" srcset="./images/symptoms_mask_01_desk.png">
-                                <img src="./images/symptoms_mask_01_mob.png" class="absolute" alt="">
-                            </picture> -->
                                 <img src="./images/symptoms_mask_01.png" class="absolute" alt="">
                                 <h3 class="text_center">Порча</h3>
                                 <div>
@@ -383,41 +379,31 @@
         <p>Если вы потеряли в веру в лучшее и себя, свяжитесь с компанией по указанным контактам или заполните форму
             обратной связи.
             Помните, выход – есть!</p>
-        
-
         <div class="flex flex_column align_center justify_between footer_contact relative">
             <picture>
                 <source media="(max-width: 991px)" srcset="./images/contact_mob.png">
                 <source media="(min-width: 992px)" srcset="./images/contact_desk.png">
                 <img src="./images/contact_mob.png" alt="">
             </picture>
-
-            <div class="form_result absolute opacity_0">
-                <div class="relative">
+            <div class="form_result opacity_0 flex align_center">
+                <div class="relative yellow">
                     <div class="borders_left_top absolute"></div>
                     <div class="borders_left_bottom absolute"></div>
-                    <p>Спасибо! Сообщение отправлено.</p>
+                    <p></p>
                     <div class="borders_right_top absolute"></div>
                     <div class="borders_right_bottom absolute"></div>
                 </div>
             </div>
-            
             <form action="" class="flex flex_column align_center justify_between" id="connectForm">
-                
-                
                 <input type="text" name="name" placeholder="Имя" autocomplete="off" required>
                 <input type="text" name="phone" pattern="^[0-9-+\s()]*$" minlength="8" placeholder="Телефон"
-                autocomplete="off" required>
+                    autocomplete="off" required>
                 <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email"
-                autocomplete="off" required>
-                
+                    autocomplete="off" required>
                 <textarea name="message" placeholder="Сообщение"></textarea>
-                
                 <button type="submit" form="connectForm">Отправить</button>
             </form>
-
         </div>
-
     </footer>
     <div class="canvas none"></div>
     <script src="./js/swiper-bundle.min.js"></script>

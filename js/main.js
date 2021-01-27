@@ -91,3 +91,24 @@ new Swiper('.comments .swiper-container', {
     nextEl: '.swiper-button-next',
   },
 });
+connectForm.onsubmit = function (e) {
+  e.preventDefault()
+  let xhr = new XMLHttpRequest()
+  xhr.open('POST', '/submit')
+  xhr.send(new FormData(this))
+  xhr.onload = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      showMessage('Спасибо! Ваше сообщение отправлено.')
+    } else {
+      showMessage('Сейчас невозможно отправить Ваши данные, попробуйте позже!')
+    }
+  }
+  function showMessage(message) {
+    var result = document.querySelector('.form_result')
+    result.querySelector('p').innerHTML = message
+    result.classList.add('active')
+    report_conversion();
+    setTimeout(function () { result.classList.remove('active') }, 3000)
+  }
+  this.reset()
+}
