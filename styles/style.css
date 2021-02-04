@@ -107,7 +107,6 @@ h6 {
 }
 button {
     border: none;
-    cursor: pointer;
 }
 a, a:hover {
     text-decoration: none;
@@ -472,6 +471,9 @@ form button:hover {
     }
     .section {
         max-width: 960px;
+    }
+    button {
+        cursor: pointer;
     }
     .header_nav_menu {
         position: unset;

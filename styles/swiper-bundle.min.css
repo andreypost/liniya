@@ -154,7 +154,6 @@
     justify-content: center;
     background-color: #F3C623;
     border-radius: 55%;
-    cursor: pointer;
     transition: all .2s;
     /* position: absolute;
     top: 50%;
@@ -624,6 +623,7 @@ button.swiper-pagination-bullet {
     .swiper-button-next, .swiper-button-prev {
         width: 72px;
         height: 72px;
+        cursor: pointer;
     }
     .comments .swiper-button-next, .comments .swiper-button-prev {
         box-sizing: border-box;
