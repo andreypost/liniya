@@ -609,7 +609,7 @@ button.swiper-pagination-bullet {
 
 @media (min-width: 992px) {
     .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
-        left: 84%;
+        left: 82%;
     }
     .comments .swiper-button-prev, .comments .swiper-container-rtl .swiper-button-next {
         left: 33%;
