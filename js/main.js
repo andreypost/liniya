@@ -23,7 +23,16 @@ function toggleNavMenu(nav, canvas, menu) {
   burger.onclick = function () { toggle() }
   menu.ontouchstart = function (e) { touchLength = e.touches[0].clientX }
   menu.ontouchend = function (e) { if (touchLength > (e.changedTouches[0].clientX + 60)) toggle() }
-  menu.onclick = function (e) { if (this.classList.contains('active') && e.target.tagName === 'A') toggle() }
+  menu.onclick = function (e) {
+    e.preventDefault()
+    if (this.classList.contains('active') && e.target.tagName === 'A') toggle()
+    if (e.target.closest('.scrollTo')) {
+      window.scrollBy({
+        top: document.querySelector(`.${e.target.dataset.section}`).getBoundingClientRect().top,
+        behavior: 'smooth'
+      })
+    }
+  }
   window.addEventListener('click', function (e) { if (e.target === canvas) toggle() })
 }
 toggleNavMenu(document.querySelector('.header_mob nav'), document.querySelector('.canvas'), document.querySelector('.header_nav_menu'))
@@ -91,8 +100,51 @@ new Swiper('.comments .swiper-container', {
     nextEl: '.swiper-button-next',
   },
 });
+
+/*
+function sendRequest(url, timer = 500) {
+
+  let controller = new AbortController()
+
+  setTimeout(() => {
+    console.log('abort', timer)
+    controller.abort()
+    // getData('url', timer = 5000);
+  }, timer)
+
+  async function getData(url) {
+    await fetch(url, {
+      signal: controller.signal
+    })
+    .then(response => console.log(response))
+  }
+
+  try {
+    // getData(url)
+  } catch (err) {
+    console.log(err.name)
+    if (err.name === 'AbortError') {
+    // if (err.name === 'SyntaxError') {
+      console.log(err.name)
+      // switch(timer) {
+      //   case 3000:
+      //   sendRequest('url', timer = 4000);
+      //   break;
+      //   case 4000:
+      //   sendRequest('url', timer = 5000);
+      //   break;
+      //   case 5000:
+      //     console.log('finish actions')
+      //   // return
+      // }
+    }
+  }
+}
+*/
+
 connectForm.onsubmit = function (e) {
   e.preventDefault()
+  // sendRequest(`https://randomuser.me/api/?results=${Math.floor(Math.random() * (100 - 30 + 1)) + 30}`)
   let xhr = new XMLHttpRequest()
   xhr.open('POST', '/submit')
   xhr.send(new FormData(this))

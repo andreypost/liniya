@@ -36,13 +36,13 @@
             </div>
             <nav class="header_nav_menu absolute">
                 <ul>
-                    <li><a href="#about">О нас</a></li>
-                    <li><a href="#symptoms">Причины обратиться</a></li>
-                    <li><a href="#experts">Выбор специалиста</a></li>
-                    <li><a href="#individual">Индивидуальный подход</a></li>
-                    <li><a href="#individual">Как работаем</a></li>
-                    <li><a href="#comments">Отзывы</a></li>
-                    <li><a href="#contact">Контакты</a></li>
+                    <li><a href="" class="scrollTo" data-section="about">О нас</a></li>
+                    <li><a href="" class="scrollTo" data-section="symptoms">Причины обратиться</a></li>
+                    <li><a href="" class="scrollTo" data-section="experts">Выбор специалиста</a></li>
+                    <li><a href="" class="scrollTo" data-section="individual">Индивидуальный подход</a></li>
+                    <li><a href="" class="scrollTo" data-section="individual">Как работаем</a></li>
+                    <li><a href="" class="scrollTo" data-section="comments">Отзывы</a></li>
+                    <li><a href="" class="scrollTo" data-section="contact">Контакты</a></li>
                 </ul>
             </nav>
         </div>
@@ -376,7 +376,7 @@
                 энергетические затраты и силы специалиста.</h6>
         </section>
     </main>
-    <footer class="section text_center" id="contact">
+    <footer class="contact section text_center" id="contact">
         <h2 class="font_normal">Как с нами связаться</h2>
         <p>Если вы потеряли в веру в лучшее и себя, свяжитесь с компанией по указанным контактам или заполните форму
             обратной связи.
@@ -397,11 +397,11 @@
                 </div>
             </div>
             <form action="" class="flex flex_column align_center justify_between" id="connectForm">
-                <input type="text" name="name" placeholder="Имя" autocomplete="off" required>
+                <input type="text" name="name" placeholder="Имя" autocomplete="off" >
                 <input type="text" name="phone" pattern="^[0-9-+\s()]*$" minlength="8" placeholder="Телефон"
-                    autocomplete="off" required>
+                    autocomplete="off" >
                 <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email"
-                    autocomplete="off" required>
+                    autocomplete="off" >
                 <textarea name="message" placeholder="Сообщение"></textarea>
                 <button type="submit" form="connectForm">Отправить</button>
             </form>
