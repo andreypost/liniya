@@ -103,32 +103,27 @@ new Swiper('.comments .swiper-container', {
 
 /*
 function sendRequest(url, timer = 500) {
-
   let controller = new AbortController()
-
   setTimeout(() => {
     console.log('abort', timer)
     controller.abort()
-    // getData('url', timer = 5000);
   }, timer)
-
-  async function getData(url) {
-    await fetch(url, {
+  try {
+    fetch(url, {
       signal: controller.signal
     })
-    .then(response => console.log(response))
-  }
-
-  try {
-    // getData(url)
+      .then(response => {
+        console.log(response.status, response)
+      })
   } catch (err) {
     console.log(err.name)
     if (err.name === 'AbortError') {
-    // if (err.name === 'SyntaxError') {
-      console.log(err.name)
+      sendRequest(url, timer = 1000)
+      // if (err.name === 'SyntaxError') {
+      // console.log(err.name)
       // switch(timer) {
       //   case 3000:
-      //   sendRequest('url', timer = 4000);
+      //   sendRequest(`https://randomuser.me/api/?results=${counts}`, timer = 4000);
       //   break;
       //   case 4000:
       //   sendRequest('url', timer = 5000);
@@ -137,14 +132,15 @@ function sendRequest(url, timer = 500) {
       //     console.log('finish actions')
       //   // return
       // }
+    } else {
+      throw err
     }
   }
-}
-*/
-
+}*/
 connectForm.onsubmit = function (e) {
   e.preventDefault()
-  // sendRequest(`https://randomuser.me/api/?results=${Math.floor(Math.random() * (100 - 30 + 1)) + 30}`)
+  // sendRequest(`[https://randomuser.me/api/?results=${10}]`)
+  // sendRequest('https://my-json-server.typicode.com/andreypost/db/posts')
   let xhr = new XMLHttpRequest()
   xhr.open('POST', '/submit')
   xhr.send(new FormData(this))
