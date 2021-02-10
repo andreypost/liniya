@@ -26,7 +26,7 @@ function toggleNavMenu(nav, canvas, menu) {
   menu.onclick = function (e) {
     e.preventDefault()
     if (this.classList.contains('active') && e.target.tagName === 'A') toggle()
-    if (e.target.closest('.scrollTo')) {
+    if (e.target.dataset.section) {
       window.scrollBy({
         top: document.querySelector(`.${e.target.dataset.section}`).getBoundingClientRect().top,
         behavior: 'smooth'
@@ -160,3 +160,49 @@ connectForm.onsubmit = function (e) {
   }
   this.reset()
 }
+
+
+// var checkNumber = {
+//   checkN(value) {
+//     return Number.isInteger(value)
+//   }
+// }
+
+// var checkString = {
+//   __proto__: checkNumber,
+//   checkV(value) {
+//     return typeof value === String
+//   }
+// }
+
+// var test = 555
+
+// console.log(checkString.checkN(test), checkString.checkV(test))
+
+
+// console.log(checkString, checkNumber)
+
+
+// function checkNumber(value) {
+//   return function() {
+//     return Number.isInteger(value)
+//   }
+// }
+
+// function checkString(value) {
+//   return function() {
+//     return typeof value === String
+//   }
+// }
+
+// checkString.prototype = checkNumber
+// var test = 555
+
+
+// let check = checkString(test)
+
+
+// console.log(check(), checkString(test))
+
+
+// console.log(checkString, checkNumber)
