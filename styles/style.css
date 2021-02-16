@@ -387,10 +387,11 @@ textarea {
     margin-bottom: 143px;
 }
 .comments img {
-    max-height: 410px;
-    min-height: 410px;
-    -o-object-fit: contain;
-    object-fit: contain;
+    /* max-height: 410px; */
+    /* min-height: 410px; */
+    /* -o-object-fit: contain; */
+    /* object-fit: contain; */
+    border-radius: 5px;
 }
 footer>h2 {
     margin-bottom: 40px;
@@ -629,8 +630,8 @@ form button:hover {
         justify-content: center;
     }
     .comments .swiper-slide img {
-        max-height: 610px;
-        min-height: 610px;
+        /* max-height: 610px; */
+        /* min-height: 610px; */
         margin-bottom: unset;
         -webkit-transition: margin-bottom .4s;
         -o-transition: margin-bottom .4s;
