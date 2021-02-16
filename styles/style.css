@@ -114,6 +114,9 @@ a, a:hover {
 a:focus, button:focus, input:focus, textarea:focus, .header_mob_burger span:focus, .header_nav_menu li {
     outline: none;
 }
+a, button {
+    cursor: none;
+}
 ul {
     list-style-type: none;
     -webkit-padding-start: unset;
@@ -147,6 +150,12 @@ textarea {
     resize: none;
 }
 /* header section */
+.header_phone {
+    top: -85px;
+    right: 15px;
+    font-size: 15px;
+    z-index: 99999;
+}
 .header_mob {
     top: 0;
     padding: 38px 0 41px;
@@ -235,6 +244,7 @@ textarea {
 .header_mob p {
     font-size: 22px;
     line-height: 0;
+    margin-right: auto;
 }
 .header_banner_text {
     margin-top: 133px;
@@ -387,10 +397,10 @@ textarea {
     margin-bottom: 143px;
 }
 .comments img {
-    /* max-height: 410px; */
-    /* min-height: 410px; */
-    /* -o-object-fit: contain; */
-    /* object-fit: contain; */
+    max-height: 410px;
+    min-height: 410px;
+    -o-object-fit: contain;
+    object-fit: contain;
     border-radius: 5px;
 }
 footer>h2 {
@@ -473,8 +483,17 @@ form button:hover {
     .section {
         max-width: 960px;
     }
-    button {
+    a, button {
         cursor: pointer;
+    }
+    .header_phone {
+        top: 110px;
+        right: 40px;
+        padding-bottom: 4px;
+        border-bottom: 2px solid var(--yellow);
+    }
+    .header_phone:hover {
+        color: white;
     }
     .header_nav_menu {
         position: unset;
@@ -630,8 +649,8 @@ form button:hover {
         justify-content: center;
     }
     .comments .swiper-slide img {
-        /* max-height: 610px; */
-        /* min-height: 610px; */
+        max-height: 610px;
+        min-height: 610px;
         margin-bottom: unset;
         -webkit-transition: margin-bottom .4s;
         -o-transition: margin-bottom .4s;
