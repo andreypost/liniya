@@ -156,6 +156,11 @@ textarea {
     font-size: 15px;
     z-index: 99999;
 }
+.header_phone svg {
+    margin-right: 3px;
+    margin-bottom: -3px;
+    fill: var(--yellow);
+}
 .header_mob {
     top: 0;
     padding: 38px 0 41px;
@@ -492,8 +497,9 @@ form button:hover {
         padding-bottom: 4px;
         border-bottom: 2px solid var(--yellow);
     }
-    .header_phone:hover {
+    .header_phone:hover, .header_phone:hover svg {
         color: white;
+        fill: white;
     }
     .header_nav_menu {
         position: unset;
